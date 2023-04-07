@@ -9,18 +9,26 @@
   "categories": [
     "Programming Languages"
   ],
-  "repository": "https://github.com/yourusername/koliada-syntax-highlighter",
+  "repository": "https://github.com/Dagread/Koliada-Syntax-Highlighter",
   "contributes": {
-    "languages": [{
-      "id": "koliada",
-      "aliases": ["Koliada", "koliada"],
-      "extensions": [".koliada",".kld"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "koliada",
-      "scopeName": "source.koliada",
-      "path": "./syntaxes/koliada.tmLanguage.json"
-    }]
-  }
+    "languages": [
+      {
+        "id": "koliada",
+        "aliases": ["Koliada", "koliada"],
+        "extensions": [".koliada", ".kld"],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./icons/koliada.svg",
+          "dark": "./icons/koliada.svg"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "koliada",
+        "scopeName": "source.koliada",
+        "path": "./syntaxes/koliada.tmLanguage.json"
+      }
+    ]
+  }  
 }

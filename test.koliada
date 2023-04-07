@@ -1,0 +1,27 @@
+move_speed = 5
+jump_height = 2
+
+:public food_layer = LayerMask()
+:public danger_layer = LayerMask()
+
+rigidbody = RigidBody()
+current_food = GameObject()
+
+rigidbody = this.rigidbody()
+
+while True:
+    navigate()
+
+def navigate():
+    food_objects = findFood(food_layer)
+    danger_objects = findDanger(danger_layer)
+    destination = evaluateDirection(danger_objects, food_objects)
+
+    if(destination != transform.position):
+        hit = RaycastHit()
+        if( Physics.Raycast(transform.position, destination - transform.position, hit) ):
+            jumpTo(destination, jump_height)
+        else:
+            walkTo(destination)
+
+def findFoor(food_layer):
