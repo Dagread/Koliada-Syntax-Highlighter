@@ -14,8 +14,14 @@
     "languages": [
       {
         "id": "koliada",
-        "aliases": ["Koliada", "koliada"],
-        "extensions": [".koliada", ".kld"],
+        "aliases": [
+          "Koliada",
+          "koliada"
+        ],
+        "extensions": [
+          ".koliada",
+          ".kld"
+        ],
         "configuration": "./language-configuration.json",
         "icon": {
           "light": "./icons/koliada.svg",
@@ -30,5 +36,8 @@
         "path": "./syntaxes/koliada.tmLanguage.json"
       }
     ]
-  }  
+  },
+  "devDependencies": {
+    "js-yaml": "^4.1.0"
+  }
 }

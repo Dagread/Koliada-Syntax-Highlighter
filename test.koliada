@@ -1,5 +1,21 @@
 move_speed = 5
-jump_height = 2
+jump_height = 2.01 #hello
+
+#aaaaaa
+
+###
+Hello
+World
+###
+
+# adads
+
+a = "Hello world"
+if(true):
+	return(false, null)
+
+def Function(variable: int):
+	do.something()
 
 :public food_layer = LayerMask()
 :public danger_layer = LayerMask()
@@ -9,10 +25,10 @@ current_food = GameObject()
 
 rigidbody = this.rigidbody()
 
-while True:
+while true:
     navigate()
 
-def navigate():
+def navigate(variable):
     food_objects = findFood(food_layer)
     danger_objects = findDanger(danger_layer)
     destination = evaluateDirection(danger_objects, food_objects)

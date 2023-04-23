@@ -1,0 +1,60 @@
+---
+name: Koliada
+scopeName: source.koliada
+fileTypes:
+- koliada
+- kld
+patterns:
+- include: "#expression"
+repository:
+  expression:
+    patterns:
+    - include: "#controlword"
+    - include: "#commentblock"
+    - include: "#constant"
+    - include: "#number"
+    - include: "#boolean"
+    - include: "#operators"
+    - include: "#public"
+    - include: "#commentline"
+    - include: "#datatype"
+    - include: "#function"
+    - include: "#variable"
+    - include: "#thisother"
+  controlword:
+    name: keyword.letter
+    match: "\\b(if|while|for|return|def|import|else|elif)\\b"
+  commentblock:
+    name: comment.block
+    begin: "###"
+    end: "###"
+  commentline:
+    name: comment.line
+    match: "(#.*?[\\s\\S]$)"
+  constant:
+    name: constant.character
+    match: '".*?"'
+  number:
+    name: constant.numeric
+    match: "\\b(\\b[0-9].*?.[0-9].*?\\b)|(\\b[0-9].*?\\b)\\b"
+  boolean:
+    name: constant.language
+    match: "\\b(true|false|null)\\b"
+  operators:
+    name: constant.numeric
+    match: "\\b(not|and|or|!=|>|<|>=|<=|==)\\b"
+  public:
+    name: storage.modifier
+    match: " *:public\b"
+  datatype:
+    name: storage.type
+    match: "\\b(Vector2|Vector3|int|float|double|string|bool|Rigidbody|Rigidbody2D|RaycastHit|GameObject|Transform)\\b"
+  function:
+    name: support.function
+    match: "\\b(\\w*?)\\("
+  variable:
+    name: support.variable
+    match: "\\b\\w.*?\\b"
+  thisother:
+    name: variable.language
+    match: "\\b(this|other)\\b"
