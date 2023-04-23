@@ -2,7 +2,8 @@
   "name": "Koliada",
   "scopeName": "source.koliada",
   "fileTypes": [
-    "koliada", "kld"
+    "koliada",
+    "kld"
   ],
   "patterns": [
     {
@@ -43,6 +44,9 @@
           "include": "#function"
         },
         {
+          "include": "#subvar"
+        },
+        {
           "include": "#thisother"
         },
         {
@@ -80,7 +84,7 @@
       "match": "\\b(not|and|or|!=|>|<|>=|<=|==)\\b"
     },
     "public": {
-      "name": "constant.language",
+      "name": "keyword.letter",
       "match": " *:public\\b"
     },
     "datatype": {
@@ -96,8 +100,12 @@
       "match": "\\b\\w.*?\\b"
     },
     "thisother": {
-      "name": "variable.language",
+      "name": "constant.language",
       "match": "\\b(this|other)\\b"
+    },
+    "subvar": {
+      "name": "variable.language",
+      "match": "(((?<=[\\. \\W])\\w*(?=[\\.])))|((?<=[\\.])\\w+)"
     }
   }
 }

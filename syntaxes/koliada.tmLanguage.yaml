@@ -19,8 +19,9 @@ repository:
     - include: "#commentline"
     - include: "#datatype"
     - include: "#function"
-    - include: "#variable"
+    - include: "#subvar"
     - include: "#thisother"
+    - include: "#variable"
   controlword:
     name: keyword.letter
     match: "\\b(if|while|for|return|def|import|else|elif)\\b"
@@ -58,3 +59,6 @@ repository:
   thisother:
     name: variable.language
     match: "\\b(this|other)\\b"
+  subvar:
+    name: variable.language
+    match: "\\.(.*?)\\.|\\b(.*?)\\."
