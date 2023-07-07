@@ -17,9 +17,6 @@
           "include": "#controlword"
         },
         {
-          "include": "#commentblock"
-        },
-        {
           "include": "#constant"
         },
         {
@@ -35,7 +32,7 @@
           "include": "#public"
         },
         {
-          "include": "#commentline"
+          "include": "#commentline|#commentblock"
         },
         {
           "include": "#datatype"
@@ -85,7 +82,7 @@
     },
     "public": {
       "name": "keyword.letter",
-      "match": " *:public\\b"
+      "match": ":\\w+\\b"
     },
     "datatype": {
       "name": "storage.type",

@@ -3,6 +3,7 @@
   "displayName": "Koliada Syntex Highlighter",
   "description": "Adds syntax highlighting for the Koliada programming language, making it easier to read and write Koliada code in VSCode.",
   "version": "0.0.1",
+  "publisher": "da_gr_id",
   "engines": {
     "vscode": "^1.77.0"
   },

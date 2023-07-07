@@ -8,8 +8,6 @@ Hello
 World
 ###
 
-# adads
-
 a = "Hello world"
 if(true):
 	return(false, null)
